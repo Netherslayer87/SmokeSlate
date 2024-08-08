@@ -6,7 +6,7 @@
 
     <title>Download mods</title>
 </head>
-<body>
+<body onload="input.forEach((item) => downloadURI(item));">
     <script>
         const input = urlParams.get('input').split(',');
 
@@ -17,10 +17,6 @@
           link.click();
           link.remove();
         }
-        
-        
-        
-        input.forEach((item) => downloadURI(item));
         
         </script>
 </body>

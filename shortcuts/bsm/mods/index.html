@@ -7,7 +7,7 @@
 <script>
         const input = urlParams.get('input').split(',');
         console.log(urlParams.get('input'))
-        document.getElementById("urls").innerText = input
+        document.getElementById("urls").innerText = urlParams.get('input')
 
         function downloadURI(uri) {
           console.log(uri)

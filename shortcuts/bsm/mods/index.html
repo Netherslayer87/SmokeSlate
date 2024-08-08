@@ -9,6 +9,7 @@
 <body onload="input.forEach((item) => downloadURI(item));">
     <script>
         const input = urlParams.get('input').split(',');
+        document.getElementById("urls").innerText = input
 
         function downloadURI(uri) {
           var link = document.createElement("a");
@@ -19,5 +20,8 @@
         }
         
         </script>
+
+        <h1>Downloding...</h1>
+        <a id="urls"></a>
 </body>
 </html>

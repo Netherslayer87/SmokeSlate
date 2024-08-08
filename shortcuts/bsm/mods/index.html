@@ -6,9 +6,11 @@
 
 <script>
         const input = urlParams.get('input').split(',');
+        console.log(urlParams.get('input'))
         document.getElementById("urls").innerText = input
 
         function downloadURI(uri) {
+          console.log(uri)
           var link = document.createElement("a");
           link.download = true; // <- name instead of 'name'
           link.href = uri;

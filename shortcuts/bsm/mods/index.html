@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Download mods</title>
+</head>
+<body>
+    <script>
+        const input = urlParams.get('input').split(',');
+
+        function downloadURI(uri) {
+          var link = document.createElement("a");
+          link.download; // <- name instead of 'name'
+          link.href = uri;
+          link.click();
+          link.remove();
+        }
+        
+        
+        
+        input.forEach((item) => downloadURI(item));
+        
+        </script>
+</body>
+</html>

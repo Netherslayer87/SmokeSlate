@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Download mods</title>
-</head>
-<body onload="input.forEach((item) => downloadURI(item));">
-    <script>
+<script>
         const input = urlParams.get('input').split(',');
         document.getElementById("urls").innerText = input
 
@@ -20,9 +17,11 @@
         }
         
         </script>
-
-        <h1>Downloding...</h1>
-        <progress></progress>
-        <a id="urls"></a>
+        <title>Download mods</title>
+</head>
+<body onload="input.forEach((item) => downloadURI(item));">
+  <h1>Downloding...</h1>
+  <progress></progress>
+  <a id="urls">urls</a>
 </body>
 </html>

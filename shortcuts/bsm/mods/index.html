@@ -11,19 +11,21 @@
         console.log(urlParams.get('input'))
         document.getElementById("urls").innerText = urlParams.get('input')
 
-        function downloadURI(uri) {
-          console.log(uri)
-          var link = document.createElement("a");
-          link.download = ''; // <- name instead of 'name'
-          link.href = uri;
-          link.click();
-          link.remove();
+        function downloadURI(urls) {
+          urls.forEach(url => {
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = '';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
         }
         
         </script>
         <title>Download mods</title>
 </head>
-<body onload="input.forEach((item) => downloadURI(item));">
+<body onload="downloadURI(input);">
   <h1>Downloding...</h1>
   <progress></progress>
   <a id="urls">urls</a>

@@ -22,11 +22,30 @@
             max-width: 800px;
             margin: 0 auto;
         }
-        .button {
-            background-color: #4CAF50;
+        .download-button {
+            display: inline-block;
+            background-color: #007BFF;
             color: white;
-            padding: 10px 20px;
+            padding: 15px 30px;
             text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .screenshots {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .screenshot {
+            flex: 1 1 calc(50% - 10px);
+            max-width: calc(50% - 10px);
+        }
+        .screenshot img {
+            width: 100%;
+            height: auto;
             border-radius: 5px;
         }
         footer {
@@ -46,26 +65,27 @@
     </header>
     <div class="container">
         <h2>Overview</h2>
-        <p>This Apple Shortcut streamlines the process of modding the popular VR game, <strong>Beat Saber</strong>. It automates the downloading, organizing, and installation of custom mods, ensuring a seamless gaming experience.</p>
+        <p>This Apple Shortcut streamlines the process of modding the popular VR game, <strong>Beat Saber</strong>. It automates the downloading and installation of custom mods, ensuring a seamless gaming experience.</p>
+
+        <a href="#" class="download-button">Download Beat Saber Modding Assistant</a>
 
         <h2>Features</h2>
         <ul>
             <li><strong>Automated Mod Download:</strong> Quickly access the latest mods from trusted sources with a single tap.</li>
-            <li><strong>Organized Mod Storage:</strong> Automatically sort and store downloaded mods in designated folders for easy management.</li>
             <li><strong>Easy Installation:</strong> Install mods directly into your Beat Saber game with minimal effort.</li>
-            <li><strong>Backup and Restore:</strong> Create backups of your current mods and game settings, and restore them anytime.</li>
         </ul>
 
         <h2>Requirements</h2>
         <ul>
             <li>iOS device with the Apple Shortcuts app installed.</li>
+            <li>A windows or MacOS computer</li>
             <li>Beat Saber game installed on your VR setup.</li>
             <li>An active internet connection for downloading mods.</li>
         </ul>
 
         <h2>Installation</h2>
         <ol>
-            <li>Download the <a href="#" class="button">Beat Saber Modding Assistant</a> shortcut from the Apple Shortcuts Gallery.</li>
+            <li>Download the <a href="#" class="button">Beat Saber Modding Assistant</a> shortcut from RoutineHub</li>
             <li>Open the Shortcuts app and add the downloaded shortcut.</li>
             <li>Customize any settings or preferences to match your setup.</li>
             <li>Run the shortcut and follow the on-screen instructions.</li>
@@ -74,15 +94,26 @@
         <h2>Usage</h2>
         <ol>
             <li>Launch the <strong>Beat Saber Modding Assistant</strong> from the Shortcuts app or your home screen.</li>
-            <li>Select the mods you want to download and install.</li>
             <li>Follow the prompts to complete the installation process.</li>
+            <li>Select the mods you want to download and install.</li>
             <li>Enjoy your enhanced Beat Saber experience with new mods!</li>
         </ol>
+
+        <h2>Screenshots</h2>
+        <div class="screenshots">
+            <div class="screenshot">
+                <img src="screenshot1.jpg" alt="Screenshot 1">
+            </div>
+            <div class="screenshot">
+                <img src="screenshot2.jpg" alt="Screenshot 2">
+            </div>
+            <!-- Add more screenshots as needed -->
+        </div>
 
         <h2>Support</h2>
         <p>For any issues or suggestions, please contact <a href="mailto:support@example.com">support@example.com</a>.</p>
 
-        <p><em>Note: This shortcut is designed to work with legal modding practices and sources. Please respect the terms and conditions of Beat Saber and its developers.</em></p>
+        <p><em>Note: This shortcut is designed to work with Oculus/Meta Quest headsets.
     </div>
     <footer>
         <p>&copy; 2024 Beat Saber Modding Assistant</p>

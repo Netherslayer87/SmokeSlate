@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Merchandise</title>
+    <style>
+        /* Styles for product container */
+        .product {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            width: 300px;
+            float: left;
+            text-align: center;
+        }
+        /* Styles for product image */
+        .product img {
+            max-width: 200px;
+            max-height: 200px;
+        }
+        /* Styles for product name */
+        .product h3 {
+            margin-top: 5px;
+        }
+        /* Styles for product price */
+        .product p {
+            margin-top: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Marvel Merchandise</h1>
+    <div id="productList"></div>
+
+    <script>
+        // Function to fetch Marvel products from a JSON file
+        async function fetchMarvelProducts() {
+            try {
+                // Fetch data from JSON file
+                const response = await fetch('marvel_products.json');
+                const data = await response.json();
+                
+                // Display products on webpage
+                const productListDiv = document.getElementById('productList');
+                data.products.forEach(product => {
+                    const productDiv = document.createElement('div');
+                    productDiv.classList.add('product');
+                    productDiv.innerHTML = `
+                        <img src="${product.image}" alt="${product.name}">
+                        <h3>${product.name}</h3>
+                        <p>$${product.price}</p>
+                    `;
+                    productListDiv.appendChild(productDiv);
+                });
+            } catch (error) {
+                console.error('Error fetching Marvel products:', error);
+            }
+        }
+
+        // Call fetchMarvelProducts function to display products when the page loads
+        fetchMarvelProducts();
+    </script>
+</body>
+</html>

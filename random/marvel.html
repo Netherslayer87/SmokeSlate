@@ -39,7 +39,7 @@
         async function fetchMarvelProducts() {
             try {
                 // Fetch data from JSON file
-                const response = await fetch('marvel_products.json');
+                const response = await fetch('https://smokeslate.github.io/random/data.json');
                 const data = await response.json();
                 
                 // Display products on webpage

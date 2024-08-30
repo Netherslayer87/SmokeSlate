@@ -1,1 +1,40 @@
-
+{
+    "products": [
+        {
+            "name": "Captain America Shield Replica",
+            "image": "https://via.placeholder.com/200",
+            "price": 299.99
+        },
+        {
+            "name": "Iron Man Mark LXXXV Helmet",
+            "image": "https://via.placeholder.com/200",
+            "price": 349.99
+        },
+        {
+            "name": "Spider-Man Web-Shooter Replica",
+            "image": "https://via.placeholder.com/200",
+            "price": 149.99
+        },
+        {
+            "name": "Thor's Mjolnir Hammer Replica",
+            "image": "https://via.placeholder.com/200",
+            "price": 199.99
+        },
+        {
+            "name": "Black Panther Vibranium Necklace",
+            "image": "https://via.placeholder.com/200",
+            "price": 99.99
+        },
+        {
+            "name": "Marvel Logo Hoodie",
+            "image": "https://via.placeholder.com/200",
+            "price": 39.99
+        },
+        {
+            "name": "Avengers Endgame Blu-ray",
+            "image": "https://via.placeholder.com/200",
+            "price": 29.99
+        }
+        // Add more products as needed
+    ]
+}

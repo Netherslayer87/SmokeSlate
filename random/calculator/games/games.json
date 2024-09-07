@@ -25,5 +25,14 @@
         "image": "https://i.imgur.com/MbL8Ap5.png",
         "link": "/games/index.html?id=3",
         "download": "https://tiplanet.org/modules/archives/download.php?id=123456"
+    },
+    {
+        "title": "PacMan CE",
+        "id": "4",
+        "description": "Adaptation of the 1980 Pac-Man arcade game for CE range calculators.<br><br>Also available on http://www.ticalc.org/archives/files/fileinfo/464/46430.html",
+        "author": "MateoConLechuga",
+        "image": "https://i.imgur.com/13NwJwk.png",
+        "link": "/games/index.html?id=4",
+        "download": "https://tiplanet.org/modules/archives/download.php?id=235053"
     }
 ]

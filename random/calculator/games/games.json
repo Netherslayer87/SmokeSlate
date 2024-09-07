@@ -34,5 +34,14 @@
         "image": "https://i.imgur.com/13NwJwk.png",
         "link": "/games/index.html?id=4",
         "download": "https://tiplanet.org/modules/archives/download.php?id=235053"
+    },
+        {
+        "title": "Geometry Dash CE",
+        "id": "5",
+        "description": "If you want to play other levels than the basic ones (since there are only 8) do not hesitate to take a look at the Games Levels Geometry Dash category !<br>In addition, you can create your own level! I refer you to the project topic if you want to do it on a computer or to the integrated level editor topic if you want to do it directly on your calculator!<br><br>NEW:<br>- Creation of the editing mode accessible from the main menu by pressing [Alpha] to edit and [+] to create!<br>- Improvement of the hitbox<br>- Correction of minor bugs<br>- ...<br><br>Geometry Dash (The Impossible Game) ported to TI-83 Premium CE and TI-84+CE! Play 8 different levels (Stereo Madness/Back On Track/Polargeist/Dry Out/Base After Base/Can't Let Go/Jumper/Time Machine) and create them using the integrated level editor or the online converter! (see the project and editor presentation topics below)<br><br>KEYS:<br>***** In the menu:<br>- MODE/DEL/CANCEL: quit<br>- </>: choose a level<br>- ENTER/2NDE: launch the game for the selected level<br>- ALPHA: Edit the selected level<br>- +: Create a level<br>***** In the game:<br>- 2NDE: Jump<br>- DEL: Return to the main menu<br>- CANCEL: Quit the game instantly<br>- ENTER: Open the pause menu (minimalist)<br><br>For the level editor keys, read the README.md file or see the "shortcut_gdedit.png" image in the archive!<br><br>This program is licensed under the Creative Commons BY-NC-SA 4.0 license.<br><br>Feel free to check out the project progress topic!<br>https://tiplanet.org/forum/viewtopic.php?f=12&t=19211<br>And here is the topic for the presentation of the integrated level editor!<br>https://tiplanet.org/forum/viewtopic.php?f=12&t=23601<br><br>The project is also on Github: https://github.com/MathisLav/GeometryDashCE",
+        "author": "Epharius , Anonymous0",
+        "image": "https://i.imgur.com/um6vvuA.png",
+        "link": "/games/index.html?id=5",
+        "download": "https://tiplanet.org/modules/archives/download.php?id=790041"
     }
 ]

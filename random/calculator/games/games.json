@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Game Title 1",
+        "description": "A short description of this calculator game.",
+        "image": "game1.jpg",
+        "link": "#"
+    },
+    {
+        "title": "Game Title 2",
+        "description": "A short description of this calculator game.",
+        "image": "game2.jpg",
+        "link": "#"
+    },
+    {
+        "title": "Game Title 3",
+        "description": "A short description of this calculator game.",
+        "image": "game3.jpg",
+        "link": "#"
+    }
+]

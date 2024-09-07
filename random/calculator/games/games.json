@@ -11,7 +11,7 @@
     {
         "title": "Cesium",
         "id": "2",
-        "description": "Very first shell for CE calculators :)<br><br>Features:<br>Running ASM, C, and Basic programs directly, (Un) Archiving, deleting, renaming, and hiding programs<br>Quick access to a program by typing its first letter (≈ catalog) Ability to block the [ON] key when running<br>Basic programs<br>Support for relocatable shared C and ASM libraries Customizable icons for all file types<br>___________________________________<br><br>Source code: https://github.com/MateoConLechuga/Cesium<br>",
+        "description": "Very first shell for CE calculators :)<br><br>Features:<br>Running ASM, C, and Basic programs directly.",
         "author": "MateoConLechuga",
         "image": "https://i.imgur.com/O8WeIOE.png",
         "link": "/games/index.html?id=2",
@@ -20,7 +20,7 @@
     {
         "title": "Oiram",
         "id": "3",
-        "description": "Oiram CE : a Mario-like for the TI-84 Plus CE / TI-83 Premium CE!<br>_________________________<br><br>Source code: https://github.com/mateoconlechuga/oiram<br>Level Editor: https://github.com/mateoconlechuga/oiram-editor",
+        "description": "Oiram CE : a Mario-like for the TI-84 Plus CE / TI-83 Premium CE!",
         "author": "MateoConLechuga",
         "image": "https://i.imgur.com/MbL8Ap5.png",
         "link": "/games/index.html?id=3",

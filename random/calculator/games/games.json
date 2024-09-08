@@ -26,16 +26,16 @@
         "link": "/games/index.html?id=4",
         "download": "https://tiplanet.org/modules/archives/download.php?id=235053"
     },
-        {
+    {
         "title": "Geometry Dash CE",
         "id": "5",
-        "description": "If you want to play other levels than the basic ones (since there are only 8) do not hesitate to take a look at the Games Levels Geometry Dash category !<br>In addition, you can create your own level! I refer you to the project topic if you want to do it on a computer or to the integrated level editor topic if you want to do it directly on your calculator!<br><br>NEW:<br>- Creation of the editing mode accessible from the main menu by pressing [Alpha] to edit and [+] to create!<br>- Improvement of the hitbox<br>- Correction of minor bugs<br>- ...<br><br>Geometry Dash (The Impossible Game) ported to TI-83 Premium CE and TI-84+CE! Play 8 different levels (Stereo Madness/Back On Track/Polargeist/Dry Out/Base After Base/Can't Let Go/Jumper/Time Machine) and create them using the integrated level editor or the online converter! (see the project and editor presentation topics below)<br><br>KEYS:<br>***** In the menu:<br>- MODE/DEL/CANCEL: quit<br>- </>: choose a level<br>- ENTER/2NDE: launch the game for the selected level<br>- ALPHA: Edit the selected level<br>- +: Create a level<br>***** In the game:<br>- 2NDE: Jump<br>- DEL: Return to the main menu<br>- CANCEL: Quit the game instantly<br>- ENTER: Open the pause menu (minimalist)<br><br>For the level editor keys, read the README.md file or see the "shortcut_gdedit.png" image in the archive!<br><br>This program is licensed under the Creative Commons BY-NC-SA 4.0 license.<br><br>Feel free to check out the project progress topic!<br>https://tiplanet.org/forum/viewtopic.php?f=12&t=19211<br>And here is the topic for the presentation of the integrated level editor!<br>https://tiplanet.org/forum/viewtopic.php?f=12&t=23601<br><br>The project is also on Github: https://github.com/MathisLav/GeometryDashCE",
+        "description": "If you want to play other levels than the basic ones (since there are only 8) do not hesitate to take a look at the Games Levels Geometry Dash category !<br>In addition, you can create your own level! I refer you to the project topic if you want to do it on a computer or to the integrated level editor topic if you want to do it directly on your calculator!<br><br>NEW:<br>- Creation of the editing mode accessible from the main menu by pressing [Alpha] to edit and [+] to create!<br>- Improvement of the hitbox<br>- Correction of minor bugs<br>- ...<br><br>Geometry Dash (The Impossible Game) ported to TI-83 Premium CE and TI-84+CE! Play 8 different levels (Stereo Madness/Back On Track/Polargeist/Dry Out/Base After Base/Can't Let Go/Jumper/Time Machine) and create them using the integrated level editor or the online converter! (see the project and editor presentation topics below)<br><br>KEYS:<br>***** In the menu:<br>- MODE/DEL/CANCEL: quit<br>- </>: choose a level<br>- ENTER/2NDE: launch the game for the selected level<br>- ALPHA: Edit the selected level<br>- +: Create a level<br>***** In the game:<br>- 2NDE: Jump<br>- DEL: Return to the main menu<br>- CANCEL: Quit the game instantly<br>- ENTER: Open the pause menu (minimalist)<br><br>For the level editor keys, read the README.md file or see the shortcut_gdedit.png image in the archive!<br><br>This program is licensed under the Creative Commons BY-NC-SA 4.0 license.<br><br>Feel free to check out the project progress topic!<br>https://tiplanet.org/forum/viewtopic.php?f=12&t=19211<br>And here is the topic for the presentation of the integrated level editor!<br>https://tiplanet.org/forum/viewtopic.php?f=12&t=23601<br><br>The project is also on Github: https://github.com/MathisLav/GeometryDashCE",
         "author": "Epharius , Anonymous0",
         "image": "https://i.imgur.com/um6vvuA.png",
         "link": "/games/index.html?id=5",
         "download": "https://tiplanet.org/modules/archives/download.php?id=790041"
     },
-        {
+    {
         "title": "FlappyBird",
         "id": "18",
         "description": "<br><br>FlappyBird for TI-83 Premium CE / TI-84 Plus CE.<br><br>Requires having the Libs C on his calculator",
@@ -44,7 +44,7 @@
         "link": "/games/index.html?id=18",
         "download": "https://tiplanet.org/modules/archives/download.php?id=530922"
     },
-        {
+    {
         "title": "Blocks CE",
         "id": "1",
         "description": "A Minecraft-esque game for the TI 84 CE calculator. In it you can generate natural-looking worlds, place up to 24 different kinds of blocks, keep up to 5 saves, and enjoy real-time shadow effects, transparent water, and a 10 FPS framerate!",
@@ -62,7 +62,7 @@
         "link": "/games/index.html?id=19",
         "download": "https://tiplanet.org/modules/archives/download.php?id=2790626"
     },
-        {
+    {
         "title": "Jetpack Joyride CE",
         "id": "10",
         "description": "<br><br>Jetpack Joyride CE: an adaptation of the original game on TI-83 Premium CE / TI-84+ CE!<br><br>_________________________<br><br>Jetpack Joyride CE: an adapted game available for the TI-83 Premium CE / TI-84+ CE!<br><br>_________________________<br><br>Via Cemetech: https://www.cemetech.net/forum/viewtopic.php? T=16948<br><br>Source code: https://github.com/KingDubDub/Jetpack-Joyride-CE",
@@ -71,10 +71,10 @@
         "link": "/games/index.html?id=10",
         "download": "https://tiplanet.org/modules/archives/download.php?id=2840759"
     },
-        {
+    {
         "title": "2048 CE",
         "id": "15",
-        "description": "<br><br>2048 puzzle, with animations, for TI-84 Plus CE / 83 Premium CE.<br><br>Launch the game with "Asm(prgmCE2048" ("Asm(" can be found at the beginning of the catalog)<br><br>Requires standard C libraries:<br><br>Https://tiplanet.org/forum/archives_voir.php? Id=430702",
+        "description": "<br><br>2048 puzzle, with animations, for TI-84 Plus CE / 83 Premium CE.<br><br>Launch the game with Asm(prgmCE2048 (Asm( can be found at the beginning of the catalog)<br><br>Requires standard C libraries:<br><br>Https://tiplanet.org/forum/archives_voir.php? Id=430702",
         "author": "Rico",
         "image": "https://i.imgur.com/jwx2x87.png",
         "link": "/games/index.html?id=15",
@@ -92,13 +92,13 @@
     {
         "title": "Tetric A (Tetris-like) (Version CE)",
         "id": "17",
-        "description": " <br>Written in assembly and a close port of my Tetrizm game for the Casio Prizm, Tetric A is a fast, fun take on the classic arcade game, Tetris. Enjoy five unique modes: Marathon, High Speed, Cascade, Touchdown, and Sadistic. Runs on color-screen TI-84 Plus CE. Try this addicting arcade-style game today!"<br><br>Via http://ticalc.org/archives/files/fileinfo/465/46530.html<br>Official topic: https://cemetech.net/news.php?id=755",
+        "description": " <br>Written in assembly and a close port of my Tetrizm game for the Casio Prizm, Tetric A is a fast, fun take on the classic arcade game, Tetris. Enjoy five unique modes: Marathon, High Speed, Cascade, Touchdown, and Sadistic. Runs on color-screen TI-84 Plus CE. Try this addicting arcade-style game today!<br><br>Via http://ticalc.org/archives/files/fileinfo/465/46530.html<br>Official topic: https://cemetech.net/news.php?id=755",
         "author": "Kerm, Martian",
         "image": "https://i.imgur.com/xMlk6TE.png",
         "link": "/games/index.html?id=17",
         "download": "https://tiplanet.org/modules/archives/download.php?id=302673"
     },
-        {
+    {
         "title": "Chess",
         "id": "6",
         "description": "<br><br>A simple chess game.<br><br>[V3.0]:<br><br>+ Backup system!",

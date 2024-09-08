@@ -1,14 +1,5 @@
 [
     {
-        "title": "Blocks CE",
-        "id": "1",
-        "description": "A Minecraft-esque game for the TI 84 CE calculator. In it you can generate natural-looking worlds, place up to 24 different kinds of blocks, keep up to 5 saves, and enjoy real-time shadow effects, transparent water, and a 10 FPS framerate!",
-        "author": "TheScienceElf",
-        "image": "https://i.imgur.com/P2O0WzQ.png",
-        "link": "/games/index.html?id=1",
-        "download": "https://tiplanet.org/modules/archives/download.php?id=3807678"
-    },
-    {
         "title": "Cesium",
         "id": "2",
         "description": "Very first shell for CE calculators :)<br><br>Features:<br>Running ASM, C, and Basic programs directly, (Un) Archiving, deleting, renaming, and hiding programs<br>Quick access to a program by typing its first letter (≈ catalog) Ability to block the [ON] key when running<br>Basic programs<br>Support for relocatable shared C and ASM libraries Customizable icons for all file types<br>___________________________________<br><br>Source code: https://github.com/MateoConLechuga/Cesium<br>",
@@ -52,6 +43,15 @@
         "image": "https://i.imgur.com/JmXLTMB.png",
         "link": "/games/index.html?id=18",
         "download": "https://tiplanet.org/modules/archives/download.php?id=530922"
+    },
+        {
+        "title": "Blocks CE",
+        "id": "1",
+        "description": "A Minecraft-esque game for the TI 84 CE calculator. In it you can generate natural-looking worlds, place up to 24 different kinds of blocks, keep up to 5 saves, and enjoy real-time shadow effects, transparent water, and a 10 FPS framerate!",
+        "author": "TheScienceElf",
+        "image": "https://i.imgur.com/P2O0WzQ.png",
+        "link": "/games/index.html?id=1",
+        "download": "https://tiplanet.org/modules/archives/download.php?id=3807678"
     },
     {
         "title": "Fruit Ninja CE",
@@ -164,7 +164,7 @@
     {
         "title": "Mario Kart CE",
         "id": "14",
-        "description": " <br>"pre pre-alpha demo"<br><br>----------<br><br>This is an extremely early and potentially buggy test version of<br>Mario Kart CE (or is it Oiram Trak CE?).<br><br>Simply copy MKARTCE.8XP to your calculator with your favourite<br>flavour of linking software and run it with your prefered method<br>for running native ASM programs (homescreen, Asm(, shell etc).<br><br>Keys:<br>2nd - Accelerate<br>Down - Stop<br>Left - Turn left<br>Right - Turn right<br>alpha - Shoot green shell (unlimited but it's the only item)<br>enter - Change character (8 different chars)<br><br>The demo features you vs 5 AI racers. The AI only drive around<br>the track, they don't pick up or use any items. You have access<br>to unlimited green shells as a test item - note that they break<br>when they hit another racer, a wall or object (they dont yet<br>bounce around).<br><br>There is only 1 track and despite there being a lap counter up<br>the top left, there is no end to the race (it will probably<br>overflow if you're really keen).<br><br>As mentioned this is pre pre-alpha and should be considered<br>unstable and potentially dangerous. Whilst it doesn't mess with<br>anything too serious, it does unlock SHA256 mem and rearrange<br>a lot of memory when running.<br><br>The graphics are blocky in places because this runs in half-res<br>(simulated) and is a calculator game ... so sacrifices needed<br>to be made. It should run at a playable frame rate however.<br><br>Collisions, item use, lap tracking and lots of other things are<br>only preliminary at this stage, so there are bound to be lots<br>of glitches and stuff. I'd appreciate if you find anything like<br>this that you let me know.<br><br>It is TEST ONLY. Feel free to check it out but please do not<br>distribute this in the wild as it could have serious bugs that<br>I am not aware of.<br><br>Post thoughts, criticism and findings in the thread on Cemetech.<br><br>Enjoy!<br><br>tr1p1ea",
+        "description": " <br><br><br>----------<br><br>This is an extremely early and potentially buggy test version of<br>Mario Kart CE (or is it Oiram Trak CE?).<br><br>Simply copy MKARTCE.8XP to your calculator with your favourite<br>flavour of linking software and run it with your prefered method<br>for running native ASM programs (homescreen, Asm(, shell etc).<br><br>Keys:<br>2nd - Accelerate<br>Down - Stop<br>Left - Turn left<br>Right - Turn right<br>alpha - Shoot green shell (unlimited but it's the only item)<br>enter - Change character (8 different chars)<br><br>The demo features you vs 5 AI racers. The AI only drive around<br>the track, they don't pick up or use any items. You have access<br>to unlimited green shells as a test item - note that they break<br>when they hit another racer, a wall or object (they dont yet<br>bounce around).<br><br>There is only 1 track and despite there being a lap counter up<br>the top left, there is no end to the race (it will probably<br>overflow if you're really keen).<br><br>As mentioned this is pre pre-alpha and should be considered<br>unstable and potentially dangerous. Whilst it doesn't mess with<br>anything too serious, it does unlock SHA256 mem and rearrange<br>a lot of memory when running.<br><br>The graphics are blocky in places because this runs in half-res<br>(simulated) and is a calculator game ... so sacrifices needed<br>to be made. It should run at a playable frame rate however.<br><br>Collisions, item use, lap tracking and lots of other things are<br>only preliminary at this stage, so there are bound to be lots<br>of glitches and stuff. I'd appreciate if you find anything like<br>this that you let me know.<br><br>It is TEST ONLY. Feel free to check it out but please do not<br>distribute this in the wild as it could have serious bugs that<br>I am not aware of.<br><br>Post thoughts, criticism and findings in the thread on Cemetech.<br><br>Enjoy!<br><br>tr1p1ea",
         "author": "tr1p1ea",
         "image": "https://i.imgur.com/360BMoe.png",
         "link": "/games/index.html?id=14",

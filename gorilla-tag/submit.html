@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gorilla Tag Map Share - Submit Map</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #333;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      font-weight: bold;
+      margin: 10px 0 5px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .message {
+      color: green;
+    }
+    .nav {
+      margin-bottom: 20px;
+    }
+    .nav a {
+      text-decoration: none;
+      color: #4CAF50;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="nav">
+    <a href="submit.html">Submit Map</a>
+    <a href="index.html">Browse Maps</a>
+  </div>
+
+  <h1>Submit Your Gorilla Tag Map</h1>
+  
+  <form id="mapForm">
+    <label for="title">Map Title:</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="author">Author Name:</label>
+    <input type="text" id="author" name="author" required>
+
+    <label for="link">Mod.io Link:</label>
+    <input type="url" id="link" name="link" required>
+
+    <button type="submit">Submit Map</button>
+  </form>
+
+  <div class="message" id="message"></div>
+</div>
+
+<script>
+  const form = document.getElementById('mapForm');
+  const messageDiv = document.getElementById('message');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const formData = {
+      title: document.getElementById('title').value,
+      author: document.getElementById('author').value,
+      link: document.getElementById('link').value
+    };
+
+    fetch('https://script.google.com/macros/s/AKfycbz-iNzGiAdAmrt2c7-ftSkAUavng58uO7zEptWfFu8pcSw0Vilz29jDcHtZOVXW1xMf/exec', {
+      method: 'POST',
+      body: JSON.stringify(formData),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.status === 'success') {
+        messageDiv.innerHTML = 'Map submitted successfully!';
+        form.reset();
+      } else {
+        messageDiv.innerHTML = 'There was a problem with your submission.';
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      messageDiv.innerHTML = 'An error occurred. Please try again.';
+    });
+  });
+</script>
+
+</body>
+</html>

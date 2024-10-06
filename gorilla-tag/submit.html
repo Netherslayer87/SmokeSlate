@@ -85,50 +85,47 @@
 </div>
 
 <script>
-  document.getElementById('mapForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
+  const form = document.getElementById('mapForm');
+  const messageDiv = document.getElementById('message');
 
-    const title = document.getElementById('title').value;
-    const author = document.getElementById('author').value;
-    const link = document.getElementById('link').value;
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
 
-    if (title && author && link) {
-      const formData = new FormData();
-      formData.append('title', title);
-      formData.append('author', author);
-      formData.append('link', link);
+    const formData = {
+      title: document.getElementById('title').value,
+      author: document.getElementById('author').value,
+      link: document.getElementById('link').value
+    };
 
-      // Sending form data to the Google Apps Script Web App
-      fetch('https://script.google.com/macros/s/AKfycbz-iNzGiAdAmrt2c7-ftSkAUavng58uO7zEptWfFu8pcSw0Vilz29jDcHtZOVXW1xMf/exec', {
-        method: 'POST',
-        body: formData,
-        redirect: "follow",
-      })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => {
-        if (data.result === 'success') {
-          alert('Map submitted successfully!');
-          document.getElementById('submitForm').reset(); // Clear the form
-        } else {
-          alert('Failed to submit the map. Please try again.');
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        alert('An error occurred while submitting the map.');
-      });
-    } else {
-      alert('Please fill in all fields.');
-    }
+    fetch('https://script.google.com/macros/s/AKfycbz-iNzGiAdAmrt2c7-ftSkAUavng58uO7zEptWfFu8pcSw0Vilz29jDcHtZOVXW1xMf/exec', {
+      method: 'POST',
+      body: JSON.stringify(formData),
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      redirect:"follow",
+      mode:"no-cors",
+  })
+    .then(response => {
+      window.status = response.redirect.status
+      response.json();
+    })
+    .then(data => {
+      if (window.status === '200') {
+        messageDiv.innerHTML = 'Map submitted successfully!';
+        form.reset();
+      } else {
+        messageDiv.innerHTML = 'There was a problem with your submission.';
+      }
+      console.log(window.status)
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      form.reset();
+      messageDiv.innerHTML = '';
+    });
   });
 </script>
-
-
 
 </body>
 </html>

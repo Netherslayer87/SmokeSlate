@@ -102,8 +102,11 @@
       body: JSON.stringify(formData),
       headers: {
         'Content-Type': 'application/json'
-      }
-    })
+      },
+    
+      mode: "no-cors",
+      redirect: "follow"
+  })
     .then(response => response.json())
     .then(data => {
       if (data.status === 'success') {

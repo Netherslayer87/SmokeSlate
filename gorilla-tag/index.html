@@ -64,7 +64,10 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    fetch('https://script.google.com/macros/s/AKfycbz-iNzGiAdAmrt2c7-ftSkAUavng58uO7zEptWfFu8pcSw0Vilz29jDcHtZOVXW1xMf/exec')
+    fetch('https://script.google.com/macros/s/AKfycbz-iNzGiAdAmrt2c7-ftSkAUavng58uO7zEptWfFu8pcSw0Vilz29jDcHtZOVXW1xMf/exec' ,{
+      mode: "no-cors",
+      redirect: "follow"
+    })
       .then(response => response.json())
       .then(data => {
         const mapList = document.getElementById('mapList');

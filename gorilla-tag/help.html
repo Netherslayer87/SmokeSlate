@@ -50,6 +50,10 @@
       color: #4CAF50;
       margin-right: 10px;
     }
+    img {
+      width: 90%;
+      height: auto;
+    }
   </style>
 </head>
 <body>
@@ -59,47 +63,19 @@
     <a href="submit.html">Submit Map</a>
     <a href="help.html">Help</a>
     <a href="index.html">Browse Maps</a>
-    <h6 style="size: .1em; line-height: .01; line-height-step: .01;" >not official</h6>
   </div>
 
-  <h1>Browse Gorilla Tag Maps</h1>
+  <h1>Help</h1>
   
-  <ul id="mapList" class="map-list"></ul>
+  <div>
+    <h2>IF YOU ARE MAKING A MAP MAKE SURE TO MAKE THE PREVIEW URL PUBLIC AND THE MAP HIDDEN.<br> Instructions:</h2>
+    <a>First, make sure your level is hidden, it should have a banner on the top like this:<br><br></a><img src="./assets/img3.png"><br><br>
+    <a>Next, genarate a preview url, and set the preview url to anyone w/ link and click update:</a><br><br><img src="./assets/img1.png"><br><br>
+    <a>Now your done! Copy the link (it should look like this:)</a><br><br><img src="./assets/img2.png"><br><br><br>
+    <h3>Done!</h3>
+    <h6 style="size: .1em; line-height: .01; line-height-step: .01;" >not official</h6>
+  </div>
 </div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-  fetch('https://script.google.com/macros/s/AKfycbz-iNzGiAdAmrt2c7-ftSkAUavng58uO7zEptWfFu8pcSw0Vilz29jDcHtZOVXW1xMf/exec')
-    .then(response => {
-      console.log('Raw Response:', response); // Log raw response
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.text(); // Change this to text to inspect raw output
-    })
-    .then(text => {
-      console.log('Raw Response Text:', text); // Log the raw text
-      const data = JSON.parse(text); // Manually parse the text into JSON
-      const mapList = document.getElementById('mapList');
-
-      data.forEach(map => {
-        const mapItem = document.createElement('li');
-        mapItem.className = 'map-item';
-
-        mapItem.innerHTML = `
-          <h3>${map.title}</h3>
-          <p><strong>Author:</strong> ${map.author}</p>
-          <p><a href="${map.link}" target="_blank">View on Mod.io</a></p>
-          <p><small>Submitted on: ${new Date(map.submissionDate).toLocaleDateString()}</small></p>
-        `;
-
-        mapList.appendChild(mapItem);
-      });
-    })
-    .catch(error => console.error('Error:', error));
-});
-
-</script>
 
 </body>
 </html>

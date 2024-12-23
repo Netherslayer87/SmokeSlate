@@ -7,35 +7,46 @@
     <div id="formContainer">
         <h1>Find the Closest Musical Note</h1>
         <form id="noteForm">
-            <label for="noteInput">Enter a musical note (e.g., A2, A#4):</label>
+            <label for="noteInput">Enter a musical note (e.g., F#3, A4):</label>
             <input type="text" id="noteInput" name="noteInput" required>
             <button type="submit">Find Closest Note</button>
         </form>
     </div>
 
-    <h2><span id="result"></span></h2>
+    <h2>Result: <span id="result"></span></h2>
 
     <script>
         // List of notes with their associated labels
         const notesWithLabels = [
-            { note: "A3", label: "Black" },
-            { note: "B3", label: "White" },
+            { note: "F#3", label: "Gray" },
+            { note: "G3", label: "Blue" },
+            { note: "G#3", label: "N/A" },
+            { note: "A4", label: "Black" },
+            { note: "A#4", label: "Light Olive" },
+            { note: "B4", label: "White (Glowing Red)" },
+            { note: "C4", label: "Light Mocha" },
             { note: "C#4", label: "Dark Red" },
-            { note: "D4", label: "Red" },
-            { note: "E4", label: "Orange" },
+            { note: "D4", label: "Red (Glowing Yellow)" },
+            { note: "D#4", label: "Mocha" },
+            { note: "E4", label: "Orange (Glowing Orange)" },
             { note: "F4", label: "Light Brown" },
-            { note: "F#4", label: "Yellow" },
-            { note: "G4", label: "Light Green" },
-            { note: "A4", label: "Dark Green" },
-            { note: "A#4", label: "Light Teal" },
-            { note: "B4", label: "Dark Blue" },
+            { note: "F#4", label: "Light Yellow (Glowing Green)" },
+            { note: "G4", label: "Light Teal" },
+            { note: "G#4", label: "Olive" },
+            { note: "A5", label: "Dark Green (Glowing Cyan)" },
+            { note: "A#5", label: "Cyan" },
+            { note: "B5", label: "Dark Blue (Glowing Red / Pink)" },
             { note: "C5", label: "Light Blue" },
-            { note: "C#5", label: "Blue" },
-            { note: "D5", label: "Purple and Glowing White" },
-            { note: "E5", label: "Brown and Glowing Orange" },
-            { note: "F#5", label: "Dark Brown and Glowing Green" },
-            { note: "A5", label: "Pink and Glowing Cyan" },
-            { note: "D6", label: "Lime" }
+            { note: "C#5", label: "Blurple" },
+            { note: "D5", label: "Purple (Glowing Yellow)" },
+            { note: "D#5", label: "Dark Gray" },
+            { note: "E5", label: "Brown (Glowing Orange)" },
+            { note: "F5", label: "Lavender" },
+            { note: "F#5", label: "Dark Brown (Glowing Green)" },
+            { note: "G5", label: "Orchid" },
+            { note: "A6", label: "Pink (Glowing Cyan)" },
+            { note: "B6", label: "Yellow (Glowing Pink)" },
+            { note: "C#6", label: "(Lime?)" }
         ];
 
         // Function to validate note format
@@ -44,26 +55,26 @@
             return notePattern.test(note);
         }
 
-        // Function to find the closest match using a simple string comparison
+        // Function to find the closest match and return the result with label
         function findClosestNote(inputNote) {
             if (!isValidNoteFormat(inputNote)) {
                 return "Invalid note format";
             }
 
-            let closestNote = "";
-            let closestLabel = "";
+            let closestNote = null;
             let closestDistance = Infinity;
 
             notesWithLabels.forEach(({ note, label }) => {
                 let distance = calculateDistance(note, inputNote);
                 if (distance < closestDistance) {
                     closestDistance = distance;
-                    closestNote = note;
-                    closestLabel = label;
+                    closestNote = { note, label };
                 }
             });
 
-            return closestNote ? `${closestLabel} - ${closestNote}` : "No close match found";
+            return closestNote 
+                ? `${closestNote.label} - ${closestNote.note}`
+                : "No close match found";
         }
 
         // Function to calculate a basic "distance" between two notes

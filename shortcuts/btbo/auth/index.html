@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Fingerprint</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        #fingerprint {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            word-wrap: break-word;
+            max-width: 90%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Device Fingerprint Generator</h1>
+        <p>Unique string based on your device details:</p>
+        <div id="fingerprint">Generating...</div>
+    </div>
+    <script>
+        function getFingerprint() {
+            const components = [
+                navigator.userAgent,
+                navigator.language,
+                screen.width + 'x' + screen.height,
+                screen.colorDepth,
+                navigator.hardwareConcurrency,
+                navigator.platform,
+                navigator.vendor,
+                JSON.stringify(navigator.plugins)
+            ];
+
+            const data = components.join('|');
+
+            // Simple hash function
+            let hash = 0;
+            for (let i = 0; i < data.length; i++) {
+                const char = data.charCodeAt(i);
+                hash = (hash << 5) - hash + char;
+                hash |= 0; // Convert to 32bit integer
+            }
+
+            return 'FP-' + Math.abs(hash).toString(36);
+        }
+
+        document.getElementById('fingerprint').textContent = getFingerprint();
+    </script>
+</body>
+</html>

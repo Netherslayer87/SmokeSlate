@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BTB Online - End Screen</title>
   <style>
+    /* General Reset */
     * {
       margin: 0;
       padding: 0;
@@ -12,9 +13,9 @@
     }
 
     body {
-      font-family: 'Poppins', Arial, sans-serif;
-      background-color: #f8f8f2; /* Off-white background */
-      color: #333;
+      font-family: 'Roboto', Arial, sans-serif; /* Modern sans-serif font */
+      background: linear-gradient(135deg, #1e1e2f, #383850); /* VR-inspired gradient */
+      color: white;
       height: 100vh;
       overflow: hidden;
       display: flex;
@@ -22,17 +23,36 @@
       align-items: center;
     }
 
+    /* Container for Score and Rank */
     .game-container {
       text-align: center;
-      z-index: 2;
+      background: rgba(50, 50, 70, 0.8); /* Semi-transparent dark background */
+      border-radius: 20px;
+      padding: 40px 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Floating effect */
+      width: 90%;
+      max-width: 400px;
     }
 
     .score-rank {
-      font-size: 2rem;
+      font-size: 1.5rem;
+      margin: 20px 0;
     }
 
     .score-rank p {
-      margin: 10px 0;
+      margin: 15px 0;
+    }
+
+    .score {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #4caf50; /* Green for score */
+    }
+
+    .rank {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #2196f3; /* Blue for rank */
     }
 
     #background {
@@ -48,8 +68,8 @@
 <body>
   <div class="game-container">
     <div class="score-rank">
-      <p>Score: <span id="score">0</span></p>
-      <p>Rank: <span id="rank">Unranked</span></p>
+      <p>Score: <span id="score" class="score">0</span></p>
+      <p>Rank: <span id="rank" class="rank">Unranked</span></p>
     </div>
   </div>
   <canvas id="background"></canvas>
@@ -72,25 +92,28 @@
     canvas.height = window.innerHeight;
 
     let particlesArray = [];
-    const numberOfParticles = 80;
+    const numberOfParticles = 100;
 
     class Particle {
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 6 + 2; // Bubble size
-        this.speedX = Math.random() * 1 - 0.5; // Horizontal movement
-        this.speedY = Math.random() * -2 - 1; // Upward movement
-        this.color = `rgba(0, 150, 255, ${Math.random() * 0.8 + 0.2})`; // Blue with transparency
+        this.size = Math.random() * 6 + 2;
+        this.speedX = Math.random() * 2 - 1; // Horizontal drift
+        this.speedY = Math.random() * -2 - 1; // Upward drift
+        this.color = `rgba(33, 150, 243, ${Math.random() * 0.5 + 0.3})`; // Blue glow
       }
 
       update() {
         this.y += this.speedY;
         this.x += this.speedX;
 
-        // Respawn bubbles at the bottom when they go out of view
+        // Respawn particles at the bottom or edges
         if (this.y < 0) {
           this.y = canvas.height;
+          this.x = Math.random() * canvas.width;
+        }
+        if (this.x < 0 || this.x > canvas.width) {
           this.x = Math.random() * canvas.width;
         }
       }
@@ -99,9 +122,9 @@
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fillStyle = this.color;
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = this.color;
         ctx.fill();
-        ctx.strokeStyle = `rgba(0, 150, 255, 0.5)`; // Light blue border
-        ctx.stroke();
       }
     }
 
@@ -113,7 +136,7 @@
     }
 
     function animate() {
-      ctx.fillStyle = 'rgba(248, 248, 242, 0.3)'; // Slight transparency for smooth fading
+      ctx.fillStyle = 'rgba(30, 30, 47, 0.4)'; // Slight transparency for smooth fading
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       particlesArray.forEach(particle => {

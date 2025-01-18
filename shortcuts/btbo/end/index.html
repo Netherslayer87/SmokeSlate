@@ -14,25 +14,21 @@
     body {
       font-family: 'Poppins', Arial, sans-serif;
       background-color: #f8f8f2; /* Off-white background */
-      color: #333; /* Dark text for contrast */
+      color: #333;
       height: 100vh;
       overflow: hidden;
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
     }
 
-    h1 {
-      font-size: 3rem;
-      margin: 20px 0;
-      color: #444; /* Slightly darker for better visibility */
+    .game-container {
+      text-align: center;
+      z-index: 2;
     }
 
     .score-rank {
-      font-size: 1.5rem;
-      text-align: center;
-      margin-top: 20vh; /* Push the content downward */
+      font-size: 2rem;
     }
 
     .score-rank p {
@@ -50,11 +46,12 @@
   </style>
 </head>
 <body>
-  <h1>BTB Online</h1><center>
-  <div class="score-rank">
-    <p>Score: <span id="score">0</span></p>
-    <p>Rank: <span id="rank">Unranked</span></p>
-  </div></center>
+  <div class="game-container">
+    <div class="score-rank">
+      <p>Score: <span id="score">0</span></p>
+      <p>Rank: <span id="rank">Unranked</span></p>
+    </div>
+  </div>
   <canvas id="background"></canvas>
 
   <script>
@@ -81,22 +78,21 @@
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 4 + 1;
-        this.speedX = Math.random() * 1.5 - 0.75;
-        this.speedY = Math.random() * 1.5 - 0.75;
-        const grayValue = Math.random() * 100 + 155; // Random gray from light to medium
-        this.color = `rgba(${grayValue}, ${grayValue}, ${grayValue}, 0.8)`;
+        this.size = Math.random() * 6 + 2; // Bubble size
+        this.speedX = Math.random() * 1 - 0.5; // Horizontal movement
+        this.speedY = Math.random() * -2 - 1; // Upward movement
+        this.color = `rgba(0, 150, 255, ${Math.random() * 0.8 + 0.2})`; // Blue with transparency
       }
 
       update() {
-        this.x += this.speedX;
         this.y += this.speedY;
+        this.x += this.speedX;
 
-        // Wrap particles around screen edges
-        if (this.x < 0) this.x = canvas.width;
-        if (this.x > canvas.width) this.x = 0;
-        if (this.y < 0) this.y = canvas.height;
-        if (this.y > canvas.height) this.y = 0;
+        // Respawn bubbles at the bottom when they go out of view
+        if (this.y < 0) {
+          this.y = canvas.height;
+          this.x = Math.random() * canvas.width;
+        }
       }
 
       draw() {
@@ -104,6 +100,8 @@
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fillStyle = this.color;
         ctx.fill();
+        ctx.strokeStyle = `rgba(0, 150, 255, 0.5)`; // Light blue border
+        ctx.stroke();
       }
     }
 
@@ -115,7 +113,7 @@
     }
 
     function animate() {
-      ctx.fillStyle = 'rgba(248, 248, 242, 0.5)'; // Slight transparency for smooth fading
+      ctx.fillStyle = 'rgba(248, 248, 242, 0.3)'; // Slight transparency for smooth fading
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       particlesArray.forEach(particle => {
